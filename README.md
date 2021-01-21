@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next + Netlify + Github Actions Starter
 
-## Getting Started
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2d40592a-96c3-4110-b5ae-10c6664b921d/deploy-status)](https://app.netlify.com/sites/next-netlify-github-actions-starter/deploys)
 
-First, run the development server:
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be deployed on Netlify using Github Actions.
+
+> This template is related to the article: [How to deploy your Next.js app on Netlify using Github Actions](https://dev.to/thedaviddias/how-to-deploy-your-next-js-app-on-netlify-using-github-actions-3cf1-temp-slug-6715651)
+
+## Quick start
+
+Install the dependencies
+
+```bash
+npm install
+```
+
+Check your project is working properly launching the dev mode:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A new tab should automatically open in your browser.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+If not, go to [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Environment variables
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Go to your Github project settings and setup the following environment variables.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+| Actions secret name  | Comments                                                                                                                       |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| `NETLIFY_AUTH_TOKEN` | Request your token [here](https://app.netlify.com/user/applications#personal-access-tokens)                                    |
+| `NETLIFY_SITE_ID`    | The site to where deploy your site (get it from the API ID on your Site Settings)                                              |
 
-## Learn More
+### Open a pull request
 
-To learn more about Next.js, take a look at the following resources:
+The current Github Action only works when you open a new PR to main / master. Feel free to change to `push` instead of `pull_request` if you want to trigger on push.
+## Deploy in one-click
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can use this button below to create a new repo with the current project and automatically deploy to Netlify.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/thedaviddias/next-netlify-github-actions-starter)

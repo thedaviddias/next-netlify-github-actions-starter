@@ -4,7 +4,7 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be deployed on Netlify using Github Actions.
 
-> This template is related to the article: [How to deploy your Next.js app on Netlify using Github Actions](https://dev.to/thedaviddias/how-to-deploy-your-next-js-app-on-netlify-using-github-actions-3cf1-temp-slug-6715651)
+> This template is related to the article: [How to deploy your Next.js app on Netlify using Github Actions](https://dev.to/thedaviddias/how-to-deploy-your-next-js-app-on-netlify-using-github-actions-14bn)
 
 ## Quick start
 
